@@ -1,0 +1,34 @@
+firebase function confing 
+
+# ref https://firebase.google.com/docs/functions/get-started
+
+run  >>> npm install -g firebase-tools 
+
+# if has permission error ref https://docs.npmjs.com/getting-started/fixing-npm-permissions
+{
+	mkdir ~/.npm-global
+	npm config set prefix '~/.npm-global'
+	export PATH=~/.npm-global/bin:$PATH
+	source ~/.profile
+	npm install -g jshint
+	NPM_CONFIG_PREFIX=~/.npm-global
+}
+
+run >>> firebase login
+
+go to given link and be login
+
+run >>> firebase init functions
+
+Visit https://console.firebase.google.com to create a new project, then run firebase use --add
+
+
+run >>> firebase deploy --only functions
+
+/*
+maybe be this error 'functions' is declared but its value is never read. import * as functions from 'firebase-functions'; 
+then you must go to functions/src/index.ts and remove comment like this 
+export const helloWorld = functions.https.onRequest((request, response) => {
+  response.send("Hello from Firebase!");
+});
+*/
