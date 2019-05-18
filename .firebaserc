@@ -1,5 +1,6 @@
 {
   "projects": {
+    "default": "utest-grabber",
     "utest": "utest-grabber"
   }
 }

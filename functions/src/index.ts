@@ -26,4 +26,4 @@ export const render = functions
     response.statusCode = 200;
     response.setHeader('Content-Type', `image/png`);
     response.end(file);
- });
+  });
